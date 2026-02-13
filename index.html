@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreelanceHub.dk — Danske freelancere. Sammen.</title>
+    <meta name="description" content="Danmarks første platform for freelancere. Community, jobs, templates & værktøjer — alt på ét sted.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Header */
+        header { padding: 20px 0; border-bottom: 1px solid #e5e5e5; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .logo span { color: #1a1a1a; }
+        nav a { margin-left: 32px; color: #4b5563; text-decoration: none; font-size: 14px; }
+        nav a:hover { color: #1a1a1a; }
+        
+        /* Hero */
+        .hero { padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 20px; color: #4b5563; max-width: 600px; margin: 0 auto 40px; }
+        .cta { display: inline-block; background: #2563eb; color: #fff; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.2s; }
+        .cta:hover { background: #1d4ed8; transform: translateY(-2px); }
+        .sub-cta { display: block; margin-top: 16px; color: #6b7280; font-size: 14px; }
+        
+        /* Stats */
+        .stats { display: flex; justify-content: center; gap: 64px; padding: 40px 0; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; }
+        .stat { text-align: center; }
+        .stat-number { font-size: 32px; font-weight: 700; color: #2563eb; }
+        .stat-label { font-size: 14px; color: #6b7280; }
+        
+        /* Features */
+        .features { padding: 80px 0; }
+        .section-title { text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 48px; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .feature { padding: 32px; background: #f9fafb; border-radius: 12px; }
+        .feature-icon { font-size: 32px; margin-bottom: 16px; }
+        .feature h3 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+        .feature p { font-size: 14px; color: #4b5563; }
+        
+        /* Pricing */
+        .pricing { padding: 80px 0; background: #f9fafb; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+        .price-card { background: #fff; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5; text-align: center; }
+        .price-card.featured { border-color: #2563eb; border-width: 2px; position: relative; }
+        .featured-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #2563eb; color: #fff; padding: 4px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .price-card h3 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+        .price { font-size: 48px; font-weight: 700; margin-bottom: 8px; }
+        .price span { font-size: 16px; color: #6b7280; font-weight: 400; }
+        .price-features { list-style: none; margin: 24px 0; text-align: left; }
+        .price-features li { padding: 8px 0; font-size: 14px; color: #4b5563; }
+        .price-features li::before { content: "✓"; color: #10b981; margin-right: 8px; }
+        
+        /* Email */
+        .email { padding: 80px 0; text-align: center; }
+        .email h2 { font-size: 32px; font-weight: 700; margin-bottom: 16px; }
+        .email p { color: #4b5563; margin-bottom: 24px; }
+        .email-form { display: flex; gap: 12px; justify-content: center; max-width: 400px; margin: 0 auto; }
+        .email-form input { flex: 1; padding: 14px 16px; border: 1px solid #e5e5e5; border-radius: 8px; font-size: 16px; }
+        .email-form button { background: #2563eb; color: #fff; border: none; padding: 14px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; }
+        .email-form button:hover { background: #1d4ed8; }
+        
+        /* Footer */
+        footer { padding: 40px 0; border-top: 1px solid #e5e5e5; text-align: center; color: #6b7280; font-size: 14px; }
+        
+        @media (max-width: 768px) {
+            .features-grid, .pricing-grid { grid-template-columns: 1fr; }
+            .stats { flex-direction: column; gap: 24px; }
+            .hero h1 { font-size: 32px; }
+            .email-form { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">Freelance<span>Hub</span>.dk</div>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#pricing">Priser</a>
+                <a href="#waitlist">Venteliste</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Danske freelancere.<br>Sammen.</h1>
+            <p>Danmarks første platform for freelancere. Community, jobs, templates & værktøjer — alt på ét sted.</p>
+            <a href="#waitlist" class="cta">Tilmeld dig ventelisten</a>
+            <span class="sub-cta">Gratis at være med • Lancering Marts 2026</span>
+        </div>
+    </section>
+    
+    <section class="stats">
+        <div class="container">
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Kuraterede jobs</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Templates</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">0%</div>
+                <div class="stat-label">Opstarts-fee</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Alt hvad du har brug for</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">💼</div>
+                    <h3>Curated Jobs</h3>
+                    <p>Kuraterede freelance opportunities fra verificerede danske kunder. Ingen spam.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👥</div>
+                    <h3>Community</h3>
+                    <p>Discord community med andre freelancere. Weekly masterminds og guest speakers.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📝</div>
+                    <h3>Templates</h3>
+                    <p>Professionelle offers, kontrakter, fakturaer. Rediger og brug med det samme.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Læring</h3>
+                    <p>Kurser og guides til at vokse din freelance forretning.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Netværk</h3>
+                    <p>Find samarbejdspartnere og byg dit netværk i dansk freelance community.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Værktøjer</h3>
+                    <p>Integrerede værktøjer til projektledelse, tidsporing og fakturering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Vælg din plan</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Gratis</h3>
+                    <div class="price">kr. 0<span>/md</span></div>
+                    <p>For dem der vil starte</p>
+                    <ul class="price-features">
+                        <li>Discord community</li>
+                        <li>Job board adgang</li>
+                        <li>10 templates</li>
+                        <li>Weekly newsletter</li>
+                    </ul>
+                </div>
+                <div class="price-card featured">
+                    <span class="featured-badge">MEST POPULÆR</span>
+                    <h3>Pro</h3>
+                    <div class="price">kr. 99<span>/md</span></div>
+                    <p>For seriøse freelancere</p>
+                    <ul class="price-features">
+                        <li>Alt i Gratis</li>
+                        <li>Curated jobs (eksklusivt)</li>
+                        <li>Alle 100+ templates</li>
+                        <li>Private channels</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+                <div class="price-card">
+                    <h3>Agency</h3>
+                    <div class="price">kr. 499<span>/md</span></div>
+                    <p>For teams og bureaus</p>
+                    <ul class="price-features">
+                        <li>Alt i Pro</li>
+                        <li>5 team accounts</li>
+                        <li>Project management</li>
+                        <li>Invoice integration</li>
+                        <li>Dedikeret account manager</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="email" id="waitlist">
+        <div class="container">
+            <h2>Vær bland de første</h2>
+            <p>Tilmeld dig ventelisten og få tidlig adgang + 1 gratis måned Pro.</p>
+            <form class="email-form" action="https://formspree.io/f/your-email" method="POST">
+                <input type="email" name="email" placeholder="Din email" required>
+                <button type="submit">Tilmeld</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2026 FreelanceHub.dk — Danske freelancere. Sammen.</p>
+        </div>
+    </footer>
+</body>
+</html>
