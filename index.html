@@ -35,7 +35,20 @@
         /* Features */
         .features { padding: 80px 0; }
         .section-title { text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 48px; }
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .comparison { background: #f0f9ff; padding: 60px 0; }
+        .comparison table { width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .comparison th, .comparison td { padding: 16px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+        .comparison th { background: #2563eb; color: #fff; font-weight: 600; }
+        .comparison td:last-child { font-weight: 600; color: #10b981; }
+        .comparison tr:last-child td { border-bottom: none; }
+        
+        /* Add this new section */
+        .comparison { background: #f0f9ff; padding: 60px 0; }
+        .comparison table { width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .comparison th, .comparison td { padding: 16px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+        .comparison th { background: #2563eb; color: #fff; font-weight: 600; }
+        .comparison td:last-child { font-weight: 600; color: #10b981; }
+        .comparison tr:last-child td { border-bottom: none; }
         .feature { padding: 32px; background: #f9fafb; border-radius: 12px; }
         .feature-icon { font-size: 32px; margin-bottom: 16px; }
         .feature h3 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
@@ -89,7 +102,7 @@
     <section class="hero">
         <div class="container">
             <h1>Danske freelancere.<br>Sammen.</h1>
-            <p>Danmarks første platform for freelancere. Community, jobs, templates & værktøjer — alt på ét sted.</p>
+            <p>Danmarks eneste freelance portal med community. Kuraterede jobs, Discord, og kun 7% commission — mindre end alternativerne.</p>
             <a href="#waitlist" class="cta">Tilmeld dig ventelisten</a>
             <span class="sub-cta">Lancering Marts 2026</span>
         </div>
@@ -150,6 +163,39 @@
         </div>
     </section>
     
+    <section class="comparison" id="comparison">
+        <div class="container">
+            <h2 class="section-title">Billigere end alternativerne</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Commission</th>
+                        <th>Community</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Upwork</td>
+                        <td>15-20%</td>
+                        <td>❌</td>
+                    </tr>
+                    <tr>
+                        <td>Giig.dk</td>
+                        <td>10%</td>
+                        <td>❌</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FreelanceHub.dk</strong></td>
+                        <td><strong>7%</strong></td>
+                        <td>✅ Discord</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="text-align: center; margin-top: 24px; color: #6b7280; font-size: 14px;">7% commission + Discord community = Bedre værdi for pengene</p>
+        </div>
+    </section>
+    
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Vælg din plan</h2>
@@ -168,14 +214,13 @@
                     <span class="featured-badge">MEDLEM</span>
                     <h3>Pro</h3>
                     <div class="price">kr. 35<span>/md</span></div>
-                    <p>For seriøse freelancere</p>
+                    <p>Kun 7% commission — mindre end alternativerne.</p>
                     <ul class="price-features">
                         <li>Alt i Gratis</li>
                         <li>Discord community</li>
-                        <li>Curated jobs (eksklusivt)</li>
-                        <li>Alle 100+ templates</li>
+                        <li>24 timer early access til jobs</li>
+                        <li>Alle templates</li>
                         <li>Private channels</li>
-                        <li>Priority support</li>
                     </ul>
                 </div>
             </div>
